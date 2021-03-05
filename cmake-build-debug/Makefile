@@ -123,6 +123,33 @@ push_swap/fast:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
 
+push_swap/algo.o: push_swap/algo.c.o
+
+.PHONY : push_swap/algo.o
+
+# target to build an object file
+push_swap/algo.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/algo.c.o
+.PHONY : push_swap/algo.c.o
+
+push_swap/algo.i: push_swap/algo.c.i
+
+.PHONY : push_swap/algo.i
+
+# target to preprocess a source file
+push_swap/algo.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/algo.c.i
+.PHONY : push_swap/algo.c.i
+
+push_swap/algo.s: push_swap/algo.c.s
+
+.PHONY : push_swap/algo.s
+
+# target to generate assembly for a file
+push_swap/algo.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/algo.c.s
+.PHONY : push_swap/algo.c.s
+
 push_swap/instructions.o: push_swap/instructions.c.o
 
 .PHONY : push_swap/instructions.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... push_swap"
+	@echo "... push_swap/algo.o"
+	@echo "... push_swap/algo.i"
+	@echo "... push_swap/algo.s"
 	@echo "... push_swap/instructions.o"
 	@echo "... push_swap/instructions.i"
 	@echo "... push_swap/instructions.s"

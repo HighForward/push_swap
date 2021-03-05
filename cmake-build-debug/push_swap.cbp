@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/algo.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/instructions.c">
 			<Option target="push_swap"/>
 		</Unit>

@@ -2,45 +2,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int str_error(char *str, int code)
-{
-    printf("%s\n", str);
-    return (code);
-}
-
-int check_args(char **argv)
+int check_args(char **argv, s_flag *flag)
 {
     int i = 0;
     int y;
+    int less;
+
+    if (!ft_strncmp(argv[i], "--i", 3))
+    {
+        flag->flag_index++;
+        flag->printstack = 1;
+        i++;
+    }
 
     while (argv[i])
     {
         y = 0;
+        less = 0;
         while (argv[i][y])
         {
-            if (!ft_isdigit(argv[i][y]))
+            if (argv[i][y] == '-' || argv[i][y] == '+')
+                less++;
+            else if (!ft_isdigit(argv[i][y]))
                 return (0);
             y++;
         }
+        if (less > 1)
+            return (0);
         i++;
     }
-    return (i);
-}
-
-void print_stack(s_stack *stack)
-{
-    int i = 0;
-
-    printf("stack_%c [", stack->name);
-    while (i < stack->size)
-    {
-        char esc = ((int)i == (stack->size - 1)) ? ']' : ',';
-        printf("%d%c", stack->stack[i], esc);
-        i++;
-    }
-    if (stack->size == 0)
-        printf("]");
-    printf("\n");
+    return (i - flag->flag_index);
 }
 
 int check_duplicate(int **stack_a, int size, int nb)
@@ -66,7 +57,7 @@ int allocate_stack(int **stack_a, char **argv, int size)
     while (argv[i])
     {
         val = ft_atoi(argv[i]);
-        if (check_duplicate(stack_a, i, val))
+        if (check_duplicate(stack_a, final_size, val))
         {
             (*stack_a)[final_size] = val;
             final_size++;
@@ -78,6 +69,7 @@ int allocate_stack(int **stack_a, char **argv, int size)
     {
         int *stack = malloc(sizeof(int) * final_size);
         i = 0;
+
         while (i < final_size)
         {
             stack[i] = (*stack_a)[i];
@@ -89,32 +81,46 @@ int allocate_stack(int **stack_a, char **argv, int size)
     return (final_size);
 }
 
+void init_structs(s_stack *stack_a, s_stack *stack_b, s_flag *flag)
+{
+    stack_a->stack = NULL;
+    stack_a->size = 0;
+    stack_a->name = 'a';
+
+    stack_b->stack = NULL;
+    stack_b->size = 0;
+    stack_b->name = 'b';
+
+    flag->flag_index = 0;
+    flag->printstack = 0;
+}
+
 int main(int argc, char **argv)
 {
     s_stack stack_a;
     s_stack stack_b;
+    s_flag flag;
     int size;
 
     if (argc < 2)
         return (0);
 
-    if ((size = !check_args(argv + 1)))
+    init_structs(&stack_a, &stack_b, &flag);
+
+    if (!(size = check_args(argv + 1, &flag)))
         return (str_error("Error", 0));
 
-    stack_a.size = allocate_stack(&stack_a.stack, argv + 1, size);
-    stack_a.name = 'a';
-
+    stack_a.size = allocate_stack(&stack_a.stack, argv + 1 + flag.flag_index, size);
     stack_b.stack = malloc(sizeof(int) * size);
-    stack_b.size = 0;
-    stack_b.name = 'b';
-
     ft_memset(stack_b.stack, 0, size);
     rev_stack(&stack_a);
 
-    print_stack(&stack_a);
-    print_stack(&stack_b);
 
-    start_resolve(&stack_a, &stack_b);
+    print_stack_swag_str(&stack_a, &stack_b, &flag,"BEFORE SORTING");
+
+    start_resolve(&stack_a, &stack_b, &flag);
+
+    print_stack_swag_str(&stack_a, &stack_b, &flag,"AFTER SORTING");
 
 
     free(stack_a.stack);

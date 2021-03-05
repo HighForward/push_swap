@@ -4,4 +4,4 @@ project(push_swap)
 #set(CMAKE_CXX_STANDARD 98)
 set (CMAKE_CXX_FLAGS "-Wall -Wextra -Werror")
 
-add_executable(push_swap push_swap/main.c push_swap/instructions.c)
+add_executable(push_swap push_swap/main.c push_swap/instructions.c push_swap/algo.c)

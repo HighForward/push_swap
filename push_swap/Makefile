@@ -1,5 +1,6 @@
 SRCS		=	./main.c            \
                 ./instructions.c    \
+                ./algo.c            \
                 ../utils/utils.c
 
 NAME		=	push_swap
