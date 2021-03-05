@@ -91,6 +91,9 @@
 		<Unit filename="/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/main.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/selection_sort.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -204,6 +204,33 @@ push_swap/main.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/main.c.s
 .PHONY : push_swap/main.c.s
 
+push_swap/selection_sort.o: push_swap/selection_sort.c.o
+
+.PHONY : push_swap/selection_sort.o
+
+# target to build an object file
+push_swap/selection_sort.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/selection_sort.c.o
+.PHONY : push_swap/selection_sort.c.o
+
+push_swap/selection_sort.i: push_swap/selection_sort.c.i
+
+.PHONY : push_swap/selection_sort.i
+
+# target to preprocess a source file
+push_swap/selection_sort.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/selection_sort.c.i
+.PHONY : push_swap/selection_sort.c.i
+
+push_swap/selection_sort.s: push_swap/selection_sort.c.s
+
+.PHONY : push_swap/selection_sort.s
+
+# target to generate assembly for a file
+push_swap/selection_sort.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/selection_sort.c.s
+.PHONY : push_swap/selection_sort.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... push_swap/main.o"
 	@echo "... push_swap/main.i"
 	@echo "... push_swap/main.s"
+	@echo "... push_swap/selection_sort.o"
+	@echo "... push_swap/selection_sort.i"
+	@echo "... push_swap/selection_sort.s"
 .PHONY : help
 
 
