@@ -115,13 +115,11 @@ int main(int argc, char **argv)
     ft_memset(stack_b.stack, 0, size);
     rev_stack(&stack_a);
 
-
     print_stack_swag_str(&stack_a, &stack_b, &flag,"BEFORE SORTING");
 
     start_resolve(&stack_a, &stack_b, &flag);
 
     print_stack_swag_str(&stack_a, &stack_b, &flag,"AFTER SORTING");
-
 
     free(stack_a.stack);
     free(stack_b.stack);

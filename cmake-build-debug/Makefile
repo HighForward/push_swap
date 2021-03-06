@@ -150,6 +150,33 @@ push_swap/algo.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/algo.c.s
 .PHONY : push_swap/algo.c.s
 
+push_swap/bubble_sort.o: push_swap/bubble_sort.c.o
+
+.PHONY : push_swap/bubble_sort.o
+
+# target to build an object file
+push_swap/bubble_sort.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/bubble_sort.c.o
+.PHONY : push_swap/bubble_sort.c.o
+
+push_swap/bubble_sort.i: push_swap/bubble_sort.c.i
+
+.PHONY : push_swap/bubble_sort.i
+
+# target to preprocess a source file
+push_swap/bubble_sort.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/bubble_sort.c.i
+.PHONY : push_swap/bubble_sort.c.i
+
+push_swap/bubble_sort.s: push_swap/bubble_sort.c.s
+
+.PHONY : push_swap/bubble_sort.s
+
+# target to generate assembly for a file
+push_swap/bubble_sort.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/bubble_sort.c.s
+.PHONY : push_swap/bubble_sort.c.s
+
 push_swap/instructions.o: push_swap/instructions.c.o
 
 .PHONY : push_swap/instructions.o
@@ -231,6 +258,33 @@ push_swap/selection_sort.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/selection_sort.c.s
 .PHONY : push_swap/selection_sort.c.s
 
+push_swap/wtf_sort.o: push_swap/wtf_sort.c.o
+
+.PHONY : push_swap/wtf_sort.o
+
+# target to build an object file
+push_swap/wtf_sort.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/wtf_sort.c.o
+.PHONY : push_swap/wtf_sort.c.o
+
+push_swap/wtf_sort.i: push_swap/wtf_sort.c.i
+
+.PHONY : push_swap/wtf_sort.i
+
+# target to preprocess a source file
+push_swap/wtf_sort.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/wtf_sort.c.i
+.PHONY : push_swap/wtf_sort.c.i
+
+push_swap/wtf_sort.s: push_swap/wtf_sort.c.s
+
+.PHONY : push_swap/wtf_sort.s
+
+# target to generate assembly for a file
+push_swap/wtf_sort.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/wtf_sort.c.s
+.PHONY : push_swap/wtf_sort.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,6 +297,9 @@ help:
 	@echo "... push_swap/algo.o"
 	@echo "... push_swap/algo.i"
 	@echo "... push_swap/algo.s"
+	@echo "... push_swap/bubble_sort.o"
+	@echo "... push_swap/bubble_sort.i"
+	@echo "... push_swap/bubble_sort.s"
 	@echo "... push_swap/instructions.o"
 	@echo "... push_swap/instructions.i"
 	@echo "... push_swap/instructions.s"
@@ -252,6 +309,9 @@ help:
 	@echo "... push_swap/selection_sort.o"
 	@echo "... push_swap/selection_sort.i"
 	@echo "... push_swap/selection_sort.s"
+	@echo "... push_swap/wtf_sort.o"
+	@echo "... push_swap/wtf_sort.i"
+	@echo "... push_swap/wtf_sort.s"
 .PHONY : help
 
 

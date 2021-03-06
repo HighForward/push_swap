@@ -1,6 +1,5 @@
 #include "../includes/push_swap.h"
 
-
 void start_resolve(s_stack *stack_a, s_stack *stack_b, s_flag *flag)
 {
     s_stack_cursor stacks;
@@ -10,5 +9,7 @@ void start_resolve(s_stack *stack_a, s_stack *stack_b, s_flag *flag)
     stacks.stack_b = stack_b;
     stacks.sorted = 0;
 
-    selection_sort(&stacks);
+//    selection_sort(&stacks);
+//    wtf_sort(&stacks);
+    bubble_sort(&stacks);
 }

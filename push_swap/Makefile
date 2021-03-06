@@ -2,6 +2,8 @@ SRCS		=	./main.c            \
                 ./instructions.c    \
                 ./algo.c            \
                 ./selection_sort.c  \
+                ./bubble_sort.c     \
+                ./wtf_sort.c        \
                 ../utils/utils.c
 
 NAME		=	push_swap

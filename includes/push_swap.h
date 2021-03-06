@@ -61,4 +61,11 @@ int find_smallest(s_stack *stack, int index);
 int find_smallest_a_and_push_b(struct t_stack_cursor *stacks);
 void selection_sort(struct t_stack_cursor *stacks);
 
+//WTF SORT
+void wtf_sort(s_stack_cursor *stacks);
+
+//BUBLE SORT
+void bubble_sort(s_stack_cursor *stacks);
+
+
 #endif
