@@ -1,5 +1,42 @@
 #include "../includes/push_swap.h"
 
+int find_fastest_to_rotate(s_stack* stack, int highest, int smallest)
+{
+    if (stack->size < 2)
+        return (str_error("stack size < 2", 0));
+
+    int i = 0;
+
+    int index_from_bottom;
+    int index_from_top;
+
+    while (i < stack->size)
+    {
+        if (stack->stack[i] > stack->stack[(i == 0 ? stack->size -1 : i - 1)] && stack->stack[(i == 0 ? stack->size -1 : i - 1)] != stack->stack[smallest])
+        {
+            index_from_bottom = i;
+            break;
+        }
+        i++;
+    }
+
+    i = stack->size - 1;
+    while (i >= 0)
+    {
+        if (stack->stack[i] > stack->stack[(i == 0 ? stack->size -1 : i - 1)] && stack->stack[(i == 0 ? stack->size -1 : i - 1)] != stack->stack[smallest])
+        {
+            index_from_top = i;
+            break;
+        }
+        i--;
+    }
+
+    if (index_from_bottom < (stack->size - 1 - index_from_bottom))
+        return (index_from_bottom);
+    else
+        return (index_from_top);
+}
+
 int smallest_to_sort(s_stack_cursor *stacks)
 {
     int x = find_smallest(stacks->stack_a, 0);
@@ -34,21 +71,47 @@ void bubble_sort(s_stack_cursor *stacks)
 
     while (smallest_to_sort(stacks) == 0)
     {
-        int x = find_smallest(stacks->stack_a, 0);
-        if (stacks->stack_a->stack[stacks->stack_a->size - 1] > stacks->stack_a->stack[stacks->stack_a->size - 2] && (stacks->stack_a->stack[stacks->stack_a->size - 2] != stacks->stack_a->stack[x]))
-            sa(stacks);
+        //can optimize this to loop only when it need to search those
+        int smallest = find_smallest(stacks->stack_a, 0);
+        int biggest = find_biggest(stacks->stack_a, 0);
+
+        if (stacks->stack_a->stack[stacks->stack_a->size - 1] > stacks->stack_a->stack[stacks->stack_a->size - 2] && !(stacks->stack_a->size - 1 == biggest && stacks->stack_a->size - 2 == smallest))
+        {
+                sa(stacks);
+        }
         else
         {
-            //chercher un element mal trié, le plus proche pour SA, et faire RA ou RRA en fonction
-            ra(stacks);
+//            printf("fastest to rotate: %d\n", find_fastest_to_rotate(stacks->stack_a, biggest, smallest));
+            int fastest = find_fastest_to_rotate(stacks->stack_a, biggest, smallest);
+            int fastest_tmp = fastest;
+
+            while (fastest != stacks->stack_a->size - 1)
+            {
+                //chercher un element mal trié, le plus proche pour SA, et faire RA ou RRA en fonction
+
+                if (fastest >= ((int) (stacks->stack_a->size - 1) / 2))
+                {
+                    ra(stacks);
+                    fastest_tmp ++;
+                    if (fastest_tmp == stacks->stack_a->size - 1)
+                        break;
+                }
+                else
+                {
+                    rra(stacks);
+                    fastest_tmp--;
+                    if (fastest_tmp == -1)
+                        break;
+                }
+            }
         }
-//        sleep(1);
-        usleep(100000);
-        print_stack(stacks->stack_a);
+//        usleep(100000);
+//        print_stack(stacks->stack_a);
     }
-//    print_stack(stacks->stack_a);
 
 
+
+    //its sorted, lets put smallest at top
     int x = find_smallest(stacks->stack_a, 0);
 
     if (x >= ((int)(stacks->stack_a->size - 1) / 2))

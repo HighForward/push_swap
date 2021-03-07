@@ -58,6 +58,7 @@ void rrr(s_stack_cursor *stacks);
 //SELECTION SORT
 int is_sort(s_stack_cursor *stacks);
 int find_smallest(s_stack *stack, int index);
+int find_biggest(s_stack *stack, int index);
 int find_smallest_a_and_push_b(struct t_stack_cursor *stacks);
 void selection_sort(struct t_stack_cursor *stacks);
 

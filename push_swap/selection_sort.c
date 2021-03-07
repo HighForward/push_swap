@@ -41,6 +41,23 @@ int find_smallest(s_stack *stack, int index)
     return (index_smallest);
 }
 
+int find_biggest(s_stack *stack, int index)
+{
+    int biggest = stack->stack[0];
+    int index_biggest = 0;
+
+    while (index < stack->size)
+    {
+        if (stack->stack[index] > biggest)
+        {
+            biggest = stack->stack[index];
+            index_biggest = index;
+        }
+        index++;
+    }
+    return (index_biggest);
+}
+
 int find_smallest_a_and_push_b(struct t_stack_cursor *stacks)
 {
     int x;
