@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap
+CMAKE_SOURCE_DIR = /mnt/c/Users/Forward/Desktop/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles /mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles /mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -285,6 +285,33 @@ push_swap/wtf_sort.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/wtf_sort.c.s
 .PHONY : push_swap/wtf_sort.c.s
 
+utils/utils.o: utils/utils.c.o
+
+.PHONY : utils/utils.o
+
+# target to build an object file
+utils/utils.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils/utils.c.o
+.PHONY : utils/utils.c.o
+
+utils/utils.i: utils/utils.c.i
+
+.PHONY : utils/utils.i
+
+# target to preprocess a source file
+utils/utils.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils/utils.c.i
+.PHONY : utils/utils.c.i
+
+utils/utils.s: utils/utils.c.s
+
+.PHONY : utils/utils.s
+
+# target to generate assembly for a file
+utils/utils.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils/utils.c.s
+.PHONY : utils/utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... push_swap/wtf_sort.o"
 	@echo "... push_swap/wtf_sort.i"
 	@echo "... push_swap/wtf_sort.s"
+	@echo "... utils/utils.o"
+	@echo "... utils/utils.i"
+	@echo "... utils/utils.s"
 .PHONY : help
 
 

@@ -20,11 +20,19 @@ typedef struct t_stack_type
     char name;
 }   s_stack;
 
+typedef struct moves_type
+{
+    char **moves;
+    int capacity;
+    int size;
+}   s_moves;
+
 typedef struct t_stack_cursor
 {
     s_stack *stack_a;
     s_stack *stack_b;
     s_flag  *flag;
+    s_moves *moves;
     int sorted;
 
 }   s_stack_cursor;
@@ -34,8 +42,10 @@ void start_resolve(s_stack *stack_a, s_stack *stack_b, s_flag *flag);
 void rev_stack(s_stack *stack);
 void print_stack(s_stack *stack);
 int str_error(char *str, int code);
-void print_stack_swag_str(s_stack *stack_a, s_stack *stack_b, s_flag *flag, char *message);
+void print_moves(s_stack_cursor *stacks);
 
+void print_stack_swag_str(s_stack *stack_a, s_stack *stack_b, s_flag *flag, char *message);
+void print_stack_refresh(s_stack_cursor *stacks);
 
 s_stack *choose_stack(s_stack_cursor *stacks, char name_use);
 void swap_base(s_stack_cursor *stacks, char name_use);
@@ -54,6 +64,7 @@ void rra(s_stack_cursor *stacks);
 void rrb(s_stack_cursor *stacks);
 void rrr(s_stack_cursor *stacks);
 
+void add_to_moves(struct t_stack_cursor *stacks, char *str);
 
 //SELECTION SORT
 int is_sort(s_stack_cursor *stacks);

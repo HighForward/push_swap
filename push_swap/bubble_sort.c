@@ -14,22 +14,13 @@ int find_fastest_to_rotate(s_stack* stack, int highest, int smallest)
     {
         if (stack->stack[i] > stack->stack[(i == 0 ? stack->size -1 : i - 1)] && stack->stack[(i == 0 ? stack->size -1 : i - 1)] != stack->stack[smallest])
         {
-            index_from_bottom = i;
-            break;
+            if (!index_from_bottom)
+                index_from_bottom = i;
+            index_from_top = i;
         }
         i++;
     }
 
-    i = stack->size - 1;
-    while (i >= 0)
-    {
-        if (stack->stack[i] > stack->stack[(i == 0 ? stack->size -1 : i - 1)] && stack->stack[(i == 0 ? stack->size -1 : i - 1)] != stack->stack[smallest])
-        {
-            index_from_top = i;
-            break;
-        }
-        i--;
-    }
 
     if (index_from_bottom < (stack->size - 1 - index_from_bottom))
         return (index_from_bottom);
@@ -105,8 +96,6 @@ void bubble_sort(s_stack_cursor *stacks)
                 }
             }
         }
-//        usleep(100000);
-//        print_stack(stacks->stack_a);
     }
 
 

@@ -78,68 +78,90 @@ void reverse_rotate_base(s_stack_cursor *stacks, char name_use)
 void sa(s_stack_cursor *stacks)
 {
     swap_base(stacks, 'a');
-    write(1, "sa\n", 3);
+    add_to_moves(stacks, "sa");
+    print_stack_refresh(stacks);
+
 }
 
 void sb(s_stack_cursor *stacks)
 {
     swap_base(stacks, 'b');
-    write(1, "sb\n", 3);
+    add_to_moves(stacks, "sb");
+    print_stack_refresh(stacks);
+
 }
 
 void ss(s_stack_cursor *stacks)
 {
     swap_base(stacks, 'a');
     swap_base(stacks, 'b');
-    write(1, "ss\n", 3);
+    add_to_moves(stacks, "ss");
+    print_stack_refresh(stacks);
+
 }
 
 void pa(s_stack_cursor *stacks)
 {
     push_base(stacks, 'a');
-    write(1, "pa\n", 3);
+    add_to_moves(stacks, "pa");
+    print_stack_refresh(stacks);
+
 }
 
 void pb(s_stack_cursor *stacks)
 {
     push_base(stacks, 'b');
-    write(1, "pb\n", 3);
+    add_to_moves(stacks, "pb");
+    print_stack_refresh(stacks);
+
 }
 
 void ra(s_stack_cursor *stacks)
 {
     rotate_base(stacks, 'a');
-    write(1, "ra\n", 3);
+    add_to_moves(stacks, "ra");
+    print_stack_refresh(stacks);
+
 }
 
 void rb(s_stack_cursor *stacks)
 {
     rotate_base(stacks, 'b');
-    write(1, "rb\n", 3);
+    add_to_moves(stacks, "rb");
+    print_stack_refresh(stacks);
+
 }
 
 void rr(s_stack_cursor *stacks)
 {
     rotate_base(stacks, 'a');
     rotate_base(stacks, 'b');
-    write(1, "rr\n", 3);
+    add_to_moves(stacks, "rr");
+    print_stack_refresh(stacks);
+
 }
 
 void rra(s_stack_cursor *stacks)
 {
     reverse_rotate_base(stacks, 'a');
-    write(1, "rra\n", 4);
+    add_to_moves(stacks, "rra");
+    print_stack_refresh(stacks);
+
 }
 
 void rrb(s_stack_cursor *stacks)
 {
     reverse_rotate_base(stacks, 'b');
-    write(1, "rrb\n", 4);
+    add_to_moves(stacks, "rrb");
+    print_stack_refresh(stacks);
+
 }
 
 void rrr(s_stack_cursor *stacks)
 {
     reverse_rotate_base(stacks, 'a');
     reverse_rotate_base(stacks, 'b');
-    write(1, "rrr\n", 4);
+    add_to_moves(stacks, "rrr");
+    print_stack_refresh(stacks);
+
 }

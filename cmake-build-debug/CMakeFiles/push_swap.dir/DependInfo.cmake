@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/algo.c" "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/algo.c.o"
-  "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/bubble_sort.c" "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/bubble_sort.c.o"
-  "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/instructions.c" "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/instructions.c.o"
-  "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/main.c" "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/main.c.o"
-  "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/selection_sort.c" "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/selection_sort.c.o"
-  "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/push_swap/wtf_sort.c" "/mnt/c/Users/m4xdo/OneDrive/Bureau/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/wtf_sort.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/push_swap/algo.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/algo.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/push_swap/bubble_sort.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/bubble_sort.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/push_swap/instructions.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/instructions.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/push_swap/main.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/main.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/push_swap/selection_sort.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/selection_sort.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/push_swap/wtf_sort.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/push_swap/wtf_sort.c.o"
+  "/mnt/c/Users/Forward/Desktop/push_swap/utils/utils.c" "/mnt/c/Users/Forward/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/utils/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
